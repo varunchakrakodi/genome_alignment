@@ -1,4 +1,4 @@
-There are two scripts provided here.
+There are three scripts provided here.
 
 **1. smkalign.py**
 
@@ -42,5 +42,17 @@ Sometimes it is useful to have a deeper look into the Alignment statistics. The 
 **Command:**
 ./alignstats.sh $PATH/results
 
-Best works for Illumina Short-reads
+**3. smkscrub.py**
+
+Sometimes it is useful to scrub the host reads before aligning the reads to the target reference sequence. This is especially useful if dealing with a complex mixture of microbes in samples. This is a Snakemake file that can be used to process the .fastq.gz files against a host reference sequence. Once the scrubbed reads are obtained, it can be further processed using smkalign.py
+
+scrubbing uses minimap2 and needs to be installed in system, if not available (https://github.com/lh3/minimap2)
+
+Rules of usage are similar to smkalign.py
+
+Command:
+snakemake --snakefile smkscrub.py --configfile config.yaml --cores
+
+
+Note: The pipelines are for working with Illumina Short-reads only (Uses bwa-mem2 and cutadapt with Illumina adaptors).
 
