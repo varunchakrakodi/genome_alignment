@@ -32,8 +32,11 @@ Hence it is recommended to change headers in all .fasta files using the followin
 3. samtools (https://github.com/samtools/samtools/releases/)
 4. bwa-mem2 (https://github.com/bwa-mem2/bwa-mem2)
 5. If running DAG, requires Graphviz (https://github.com/graphp/graphviz)
+6. bcf tools (https://github.com/samtools/bcftools)
 
 .bai file can be viewed using Tablet Alignment viewer (https://ics.hutton.ac.uk/tablet/)
+
+**Update applied:** Added code for variant calling using ploidy 1
 
 **2. alignstats.sh**
 
