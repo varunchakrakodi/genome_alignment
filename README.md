@@ -1,4 +1,4 @@
-There are two scripts provided here.
+Updated: There are three scripts provided here.
 
 **1. smkalign.py**
 
@@ -44,3 +44,13 @@ Sometimes it is useful to have a deeper look into the Alignment statistics. The 
 
 **Command:**
 ./alignstats.sh $PATH/results
+
+**3. nocov.py**
+
+This is useful for creating a bed file from .bam file using pysam, which can be later used as a mask if calling consensus using bcftools --mask options from vcf files. Regions with depth below the defined value can be marked in a bed file. 
+
+**Dependencies:**
+1. Pysam (https://github.com/pysam-developers/pysam)
+
+**Command:** python3 nocob.py -d file.bam file.bed
+use -d for defining the minimum depth. Default is 1.
