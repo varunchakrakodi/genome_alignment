@@ -54,3 +54,8 @@ This is useful for creating a bed file from .bam file using pysam, which can be 
 
 **Command:** python3 nocob.py -d file.bam file.bed
 use -d for defining the minimum depth. Default is 1.
+
+**4. smkalign2**
+
+Modified version of smkalign that uses nocov code for calling consenus using bcftools.
+(Edit the path to nocov in the script)
